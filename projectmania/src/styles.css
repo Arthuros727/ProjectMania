@@ -32,6 +32,27 @@ padding: auto;
     animation-timing-function: linear;
   }
 
+  .slider{
+     /* display: none; */
+     position: absolute;
+     width: 100px;
+     height: 200px;
+     top: -15%;
+     background-color: pink;
+     margin: 0 10px;
+     /* padding-left: 1%; */
+     margin-bottom: 200px;
+     margin-right: 20px;
+     animation-name: example;
+     animation-duration: 1.7s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     border-radius: 45px;
+     border-top: solid rgb(53, 53, 53) 20px;
+     border-bottom: solid rgb(63, 63, 63) 20px;
+
+  }
+
   .entity1{
     /* display: none; */
     position: absolute;

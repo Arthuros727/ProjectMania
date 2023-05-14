@@ -22,6 +22,13 @@ function Entity2() {
 function Entity3() {
   return <div className='entity3'> <img src={note}></img></div>;
 }
+function Slider() {
+  return <div className='slider'> </div>;
+}
+
+function Slider1() {
+  return <div className='slider'> </div>;
+}
 
 export default function Game() {
  
@@ -147,11 +154,20 @@ export default function Game() {
   const [showEntities1, setShowEntities1] = useState([]);
   const [showEntities2, setShowEntities2] = useState([]);
   const [showEntities3, setShowEntities3] = useState([]);
+  const [showEntities4, setShowEntities4] = useState([]);
+  const [showEntities5, setShowEntities5] = useState([]);
+
 
   useEffect(() => {
+     
+    
+    //  enti.style.height = "500px";
+
+    let slide = []
+    let Islider = 0;
     const interval = setInterval(() => {
       seconde++;
-      console.log(seconde);
+      // console.log(seconde);
 
       if (seconde === 200 || seconde === 210 || seconde === 310 ||seconde == 600) {
         // setShowEntities(true);
@@ -233,6 +249,157 @@ export default function Game() {
           }, 1500);
         });
       }
+
+      if (seconde === 150 ) {
+        
+        // setShowEntities(true);
+        const entityElementss = document.querySelectorAll(".slider");
+        entityElementss.forEach((element) => {
+         
+          element.style.display = "block";
+        });
+        Islider++;
+        setShowEntities4([<Slider key={Islider} />]);
+        console.log(document.querySelectorAll(".slider")[1])
+        
+        // setShowEntities5([<Slider1 key={Islider} />]);
+        
+
+       
+      }else{
+        const entityElements4 = document.querySelectorAll(".slider");
+
+        entityElements4.forEach((element) => {
+          setTimeout(() => {
+            // Code à exécuter après l'attente
+            element.style.display = "none";
+            return;
+          }, 1500);
+        });
+      }
+
+      if (seconde === 170 ) {
+        
+        // setShowEntities(true);
+        // const enti = document.querySelectorAll(".slider")[2];
+
+        // enti.style.height = "500px";
+
+        // const entityElementss = document.querySelectorAll(".slider");
+        // entityElementss.forEach((element) => {
+        //   element.style.display = "block";
+        // });
+        Islider++;
+        // setShowEntities4([<Slider key={Islider} />]);
+        setShowEntities5([<Slider1 key={Islider} />]);
+        
+
+       
+      }else{
+        const entityElements5= document.querySelectorAll(".slider");
+
+        entityElements5.forEach((element) => {
+          setTimeout(() => {
+            // Code à exécuter après l'attente
+            element.style.display = "none";
+            return;
+          }, 1500);
+        });
+      }
+
+      if (seconde === 300 ) {
+        
+      
+        Islider++;
+      
+        setShowEntities4([<Slider key={Islider} />]);
+        
+
+       
+      }else{
+        const entityElements4= document.querySelectorAll(".slider");
+
+        entityElements4.forEach((element) => {
+          setTimeout(() => {
+            // Code à exécuter après l'attente
+            element.style.display = "none";
+            return;
+          }, 1500);
+        });
+      }
+
+      if (seconde === 320 ) {
+        
+      
+        Islider++;
+      
+        setShowEntities5([<Slider1 key={Islider} />]);
+        
+
+       
+      }else{
+        const entityElements5= document.querySelectorAll(".slider");
+
+        entityElements5.forEach((element) => {
+          setTimeout(() => {
+            // Code à exécuter après l'attente
+            element.style.display = "none";
+            return;
+          }, 1500);
+        });
+      }
+
+      if (seconde === 400 ) {
+        
+      
+        Islider++;
+      
+        setShowEntities4([<Slider key={Islider} />]);
+        
+
+       
+      }else{
+        const entityElements4= document.querySelectorAll(".slider");
+
+        entityElements4.forEach((element) => {
+          setTimeout(() => {
+            // Code à exécuter après l'attente
+            element.style.display = "none";
+            return;
+          }, 1500);
+        });
+      }
+
+if(seconde > 150){
+
+  let enti = document.querySelectorAll(".slider")[2];
+  enti.style.height = "500px";
+}
+
+if(seconde > 170){
+
+  let enti = document.querySelectorAll(".slider")[3];
+  enti.style.height = "50px";
+}
+
+if(seconde > 300){
+
+  let enti = document.querySelectorAll(".slider")[2];
+  enti.style.height = "400px";
+}
+
+if(seconde > 320){
+
+  let enti = document.querySelectorAll(".slider")[3];
+  enti.style.height = "200px";
+}
+
+if(seconde > 400){
+
+  let enti = document.querySelectorAll(".slider")[2];
+  enti.style.height = "10px";
+}
+      
       
 
       const entityElement = document.getElementsByClassName("entity")[0];
@@ -253,6 +420,7 @@ export default function Game() {
     document.addEventListener('keyup', handleKeyUp);
 
     return () => {
+     
       clearInterval(interval);
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('keyup', handleKeyUp);
@@ -263,10 +431,15 @@ export default function Game() {
     <div className="container">
       <div className="ok">
         <div className="row1">
+       
+        <Slider />
+        <Slider1 />
         <Entity />
             {/* <Entity />
         <Entity />
-            <Entity /> */}
+      <Entity /> */}
+            {showEntities4.map((entity4) => entity4)}
+            {showEntities5.map((entity5) => entity5)}
             {showEntities.map((entity) => entity)}
          
           <div className="box">
