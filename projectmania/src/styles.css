@@ -5,10 +5,112 @@
   border: solid 5px black;
   height: 100%;
   background-color: gray;
-
+padding: auto;
 
 }
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .entity{
+    /* display: none; */
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -15%;
+    /* background-color: blue; */
+    margin: 0 10px;
+    /* padding-left: 1%; */
+    margin-bottom: 200px;
+    margin-right: 20px;
+    animation-name: example;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .entity1{
+    /* display: none; */
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -15%;
+    /* left: 10px; */
+    /* background-color: blue; */
+    margin: 0 10px;
+    /* padding-left: 1%; */
+    margin-bottom: 200px;
+    margin-right: 20px;
+    animation-name: example;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .entity2{
+    /* display: none; */
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -15%;
+    /* background-color: blue; */
+    margin: 0 10px;
+    /* padding-left: 1%; */
+    margin-bottom: 200px;
+    margin-right: 20px;
+    animation-name: example;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .entity3{
+    /* display: none; */
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -15%;
+    /* background-color: blue; */
+    margin: 0 10px;
+    /* padding-left: 1%; */
+    margin-bottom: 200px;
+    margin-right: 20px;
+    animation-name: example;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes example {
+    0%   { top:-50%;}
+   
+    100% { top:200%;}
+  }
+  .row1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .row2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .row3{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+  }
+
+  .row4{
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -19,8 +121,11 @@
   
     width: 100px;
     height: 100px;
-    background-color: blue;
+    /* background-color: blue; */
     margin: 0 10px;
+    padding-left: 1%;
+    margin-bottom: 200px;
+    margin-right: 20px;
   }
 
   .line-1 {
